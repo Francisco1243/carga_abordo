@@ -1,0 +1,106 @@
+﻿@model Sistema_Bordo.Models.Empleados
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Empleados</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Area.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Area.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cargo.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cargo.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apellidos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apellidos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DUI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DUI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NIT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NIT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AFP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AFP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefono_movil)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefono_movil)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefono_fijo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefono_fijo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Correo_Electronico)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Correo_Electronico)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id_empleado }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

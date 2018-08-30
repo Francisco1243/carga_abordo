@@ -1,0 +1,93 @@
+﻿@model IEnumerable<Sistema_Bordo.Models.Empleados>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Area.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cargo.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombres)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Apellidos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DUI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NIT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AFP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefono_movil)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telefono_fijo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Correo_Electronico)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Area.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cargo.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombres)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Apellidos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DUI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NIT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AFP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefono_movil)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telefono_fijo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Correo_Electronico)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id_empleado }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id_empleado }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id_empleado })
+        </td>
+    </tr>
+}
+
+</table>

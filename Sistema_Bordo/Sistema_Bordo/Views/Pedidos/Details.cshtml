@@ -1,0 +1,74 @@
+﻿@model Sistema_Bordo.Models.Pedido
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Pedido</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Clientes.Empresa_Negocio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Clientes.Empresa_Negocio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Empleados.Nombres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Empleados.Nombres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo_Pago.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo_Pago.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha_Pedido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_Pedido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha_Envio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_Envio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Direccion_Envio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Direccion_Envio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha_Pago)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_Pago)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id_Pedido }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

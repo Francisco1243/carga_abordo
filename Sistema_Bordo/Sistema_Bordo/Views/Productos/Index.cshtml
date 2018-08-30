@@ -1,0 +1,81 @@
+﻿@model IEnumerable<Sistema_Bordo.Models.Productos>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Categoria.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Proveedores.Compañia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Codigo_Producto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre_Producto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Costo_Estandar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Precio_Listado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nivel_Objetivo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cantidad_Unidad)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Categoria.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Proveedores.Compañia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Codigo_Producto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre_Producto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Costo_Estandar)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Precio_Listado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nivel_Objetivo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cantidad_Unidad)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id_productos }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id_productos }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id_productos })
+        </td>
+    </tr>
+}
+
+</table>
