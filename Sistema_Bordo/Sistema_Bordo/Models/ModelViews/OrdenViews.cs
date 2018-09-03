@@ -7,5 +7,9 @@ namespace Sistema_Bordo.Models.ModelViews
 {
     public class OrdenViews
     {
+
+        public Empleados Empleados { get; set; }
+
+        public List<OrdenProductos> Productos { get; set; }
     }
 }

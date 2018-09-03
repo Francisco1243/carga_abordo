@@ -5,7 +5,13 @@ using System.Web;
 
 namespace Sistema_Bordo.Models
 {
-    public class EstadoOrden
+
+    public enum EstadoOrden
     {
+        Creada,
+        En_proseso,
+        Despachada,
+        entregada
     }
+
 }
