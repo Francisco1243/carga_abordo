@@ -3,86 +3,99 @@
 @{
     ViewBag.Title = "Delete";
 }
+<br />
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">Eliminar registro</div>
+                    <div class="panel-body">
+                        <h3><font color="red">Seguro de que quieres eliminar este registro?</font></h3>
+                        <div>
+                            <hr />
+                            @*<dl class="dl-horizontal">*@
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th scope="col">
+                                        @Html.DisplayNameFor(model => model.Empresa_Negocio)
+                                    </th>
+                                    <td scope="row">
+                                        @Html.DisplayFor(model => model.Empresa_Negocio)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">
+                                    @Html.DisplayNameFor(model => model.Nombre)
+                                    </th>
+                                    <td scope="row">
+                                        @Html.DisplayFor(model => model.Nombre)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">
+                                        @Html.DisplayNameFor(model => model.Apellido)
+                                    </th>
+                                    <td scope="row">
+                                        @Html.DisplayFor(model => model.Apellido)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">
+                                        @Html.DisplayNameFor(model => model.DUI)
+                                    </th>
+                                    <td scope="row">
+                                        @Html.DisplayFor(model => model.DUI)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">
+                                        @Html.DisplayNameFor(model => model.Correo_Electronico)
+                                    </th>
+                                    <td scope="row">
+                                        @Html.DisplayFor(model => model.Correo_Electronico)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">
+                                        @Html.DisplayNameFor(model => model.Telefono_Movil)
+                                    </th>
+                                    <td scope="row">
+                                        @Html.DisplayFor(model => model.Telefono_Movil)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">
+                                        @Html.DisplayNameFor(model => model.Telefono_Fijo)
+                                    </th>
+                                    <td scope="row">
+                                        @Html.DisplayFor(model => model.Telefono_Fijo)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">
+                                        @Html.DisplayNameFor(model => model.Direccion)
+                                    </th>
+                                    <td scope="row">
+                                        @Html.DisplayFor(model => model.Direccion)
+                                    </td>
+                                </tr>
+                            </table>
+                            @*</dl>*@
+                            @using (Html.BeginForm())
+                            {
+                                @Html.AntiForgeryToken()
 
-<h2>Delete</h2>
-
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>Clientes</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Empresa_Negocio)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Empresa_Negocio)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Nombre)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Nombre)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Apellido)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Apellido)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.DUI)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.DUI)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Correo_Electronico)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Correo_Electronico)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Telefono_Movil)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Telefono_Movil)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Telefono_Fijo)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Telefono_Fijo)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Direccion)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Direccion)
-        </dd>
-
-    </dl>
-
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
-
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+                                <div class="form-actions no-color">
+                                    <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+                                    @Html.ActionLink("Ver lista de Clientes", "Index", "Clientes", null , new { @class = "btn btn-primary"})
+                                </div>
+                            }
+                        </div>
+                    </div>
+            </div>
         </div>
-    }
+    </div>
 </div>
+

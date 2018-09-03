@@ -3,80 +3,94 @@
 @{
     ViewBag.Title = "Details";
 }
-
-<h2>Details</h2>
-
-<div>
-    <h4>Clientes</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Empresa_Negocio)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Empresa_Negocio)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Nombre)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Nombre)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Apellido)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Apellido)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.DUI)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.DUI)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Correo_Electronico)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Correo_Electronico)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Telefono_Movil)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Telefono_Movil)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Telefono_Fijo)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Telefono_Fijo)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Direccion)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Direccion)
-        </dd>
-
-    </dl>
+<br />
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading"><center>Detalles del cliente</center></div>
+                <div class="panel-body">
+                    <div>
+                        <hr />
+                        @*<dl class="dl-horizontal">*@
+                        <table class="table table-bordered">
+                            <tr>
+                                <th scope="col">
+                                    @Html.DisplayNameFor(model => model.Empresa_Negocio)
+                                </th>
+                                <td scope="row">
+                                    @Html.DisplayFor(model => model.Empresa_Negocio)
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">
+                                    @Html.DisplayNameFor(model => model.Nombre)
+                                </th>
+                                <td scope="row">
+                                    @Html.DisplayFor(model => model.Nombre)
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">
+                                    @Html.DisplayNameFor(model => model.Apellido)
+                                </th>
+                                <td scope="row">
+                                    @Html.DisplayFor(model => model.Apellido)
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">
+                                    @Html.DisplayNameFor(model => model.DUI)
+                                </th>
+                                <td scope="row">
+                                    @Html.DisplayFor(model => model.DUI)
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">
+                                    @Html.DisplayNameFor(model => model.Correo_Electronico)
+                                </th>
+                                <td scope="row">
+                                    @Html.DisplayFor(model => model.Correo_Electronico)
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">
+                                    @Html.DisplayNameFor(model => model.Telefono_Movil)
+                                </th>
+                                <td scope="row">
+                                    @Html.DisplayFor(model => model.Telefono_Movil)
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">
+                                    @Html.DisplayNameFor(model => model.Telefono_Fijo)
+                                </th>
+                                <td scope="row">
+                                    @Html.DisplayFor(model => model.Telefono_Fijo)
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">
+                                    @Html.DisplayNameFor(model => model.Direccion)
+                                </th>
+                                <td scope="row">
+                                    @Html.DisplayFor(model => model.Direccion)
+                                </td>
+                            </tr>
+                        </table>
+                        @*</dl>*@
+                    </div>
+                    <p>
+                        @Html.ActionLink("Editar", "Edit", new { id = Model.Id_clientes }, new { @class = "btn btn-success"}) |
+                        @Html.ActionLink("Ver lista de clientes", "Index", "Clientes", null, new { @class = "btn btn-primary"})
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id_clientes }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
+

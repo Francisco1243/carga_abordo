@@ -18,6 +18,7 @@ namespace Sistema_Bordo.Models
         public int Id_clientes { get; set; }
 
         [StringLength(50)]
+        [Display(Name = "Empresa")]
         public string Empresa_Negocio { get; set; }
 
         [Required]
@@ -33,14 +34,17 @@ namespace Sistema_Bordo.Models
         public string DUI { get; set; }
 
         [StringLength(50)]
+        [Display(Name = "Correo electronico")]
         public string Correo_Electronico { get; set; }
 
         [Required]
         [StringLength(50)]
+        [Display(Name = "Telefono movil")]
         public string Telefono_Movil { get; set; }
 
         [Required]
         [StringLength(50)]
+        [Display(Name = "Telefono fijo")]
         public string Telefono_Fijo { get; set; }
 
         [Required]

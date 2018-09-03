@@ -3,74 +3,84 @@
 @{
     ViewBag.Title = "Index";
 }
+<br />
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-sm-offset-0"></div>
+        <div class="col-sm-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading"><center><h4>Listado de clientes</h4></center></div>
+                <div class="panel-body">
+                    <p>
+                        @Html.ActionLink("Agregar cliente", "Create", "Clientes", null, new { @class = "btn btn-default" })
+                    </p>
+                    <table class="table table-bordered">
+                        <tr>
+                            <th scope="col">
+                                @Html.DisplayNameFor(model => model.Empresa_Negocio)
+                            </th>
+                            <th scope="col">
+                                @Html.DisplayNameFor(model => model.Nombre)
+                            </th>
+                            <th scope="col">
+                                @Html.DisplayNameFor(model => model.Apellido)
+                            </th>
+                            <th scope="col">
+                                @Html.DisplayNameFor(model => model.DUI)
+                            </th>
+                            <th scope="col">
+                                @Html.DisplayNameFor(model => model.Correo_Electronico)
+                            </th>
+                            @*<th>
+                    @Html.DisplayNameFor(model => model.Telefono_Movil)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Telefono_Fijo)
+                </th>*@
+                            <th scope="col">
+                                @Html.DisplayNameFor(model => model.Direccion)
+                            </th>
+                            <th></th>
+                        </tr>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td scope="row">
+                                    @Html.DisplayFor(modelItem => item.Empresa_Negocio)
+                                </td>
+                                <td scope="row">
+                                    @Html.DisplayFor(modelItem => item.Nombre)
+                                </td>
+                                <td scope="row">
+                                    @Html.DisplayFor(modelItem => item.Apellido)
+                                </td>
+                                <td scope="row">
+                                    @Html.DisplayFor(modelItem => item.DUI)
+                                </td>
+                                <td scope="row">
+                                    @Html.DisplayFor(modelItem => item.Correo_Electronico)
+                                </td>
+                                @*<td>
+                        @Html.DisplayFor(modelItem => item.Telefono_Movil)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Telefono_Fijo)
+                    </td>*@
+                                <td scope="row">
+                                    @Html.DisplayFor(modelItem => item.Direccion)
+                                </td>
+                                <td scope="row">
+                                        @Html.ActionLink("Editar", "Edit", new { id = item.Id_clientes }, new { @class = "btn btn-info" }) 
+                                        @Html.ActionLink("Detalles", "Details", new { id = item.Id_clientes }, new { @class = "btn btn-success" }) 
+                                        @Html.ActionLink("Eliminar", "Delete", new { id = item.Id_clientes }, new { @class = "btn btn-danger" })
+                                </td>
+                            </tr>
+                        }
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-<h2>Index</h2>
-
-<p>
-    <p>Hola</p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Empresa_Negocio)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Nombre)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Apellido)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DUI)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Correo_Electronico)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Telefono_Movil)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Telefono_Fijo)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Direccion)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Empresa_Negocio)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nombre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Apellido)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DUI)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Correo_Electronico)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Telefono_Movil)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Telefono_Fijo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Direccion)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id_clientes }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id_clientes }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id_clientes })
-        </td>
-    </tr>
-}
-
-</table>
