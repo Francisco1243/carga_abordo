@@ -3,31 +3,42 @@
 @{
     ViewBag.Title = "Index";
 }
+<br />
+<div class="container">
+    <duv class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Registro de areas</div>
+                <div class="panel-body">
+                    <p>
+                        @Html.ActionLink("Agregar área", "Create", "Areas", null, new { @class="btn btn-default"})
+                    </p>
+                    <table class="table table-bordered">
+                        <tr>
+                            <th scope="col">
+                                @Html.DisplayNameFor(model => model.Descripcion)
+                            </th>
+                            <th scope="col"></th>
+                        </tr>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td scope="row">
+                                    @Html.DisplayFor(modelItem => item.Descripcion)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Edit", "Edit", new { id = item.Id_area }, new { @class = "btn btn-info"}) |
+                                    @Html.ActionLink("Details", "Details", new { id = item.Id_area }, new { @class = "btn btn-success"}) |
+                                    @Html.ActionLink("Delete", "Delete", new { id = item.Id_area }, new { @class = "btn btn-danger"})
+                                </td>
+                            </tr>
+                        }
+                    </table>
+                </div>
+            </div>
+        </div>
+    </duv>
+</div>
 
-<h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Descripcion)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Descripcion)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id_area }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id_area }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id_area })
-        </td>
-    </tr>
-}
-
-</table>
