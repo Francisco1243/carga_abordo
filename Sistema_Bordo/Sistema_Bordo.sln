@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sistema_Bordo", "Sistema_Bordo\Sistema_Bordo.csproj", "{9F164F79-605B-4861-84EC-025EF98693A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sistema_Bordo.Tests", "Sistema_Bordo.Tests\Sistema_Bordo.Tests.csproj", "{27D161D9-18DE-46D7-B8EF-96AD6FEADE9C}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{9F164F79-605B-4861-84EC-025EF98693A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F164F79-605B-4861-84EC-025EF98693A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F164F79-605B-4861-84EC-025EF98693A8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{27D161D9-18DE-46D7-B8EF-96AD6FEADE9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{27D161D9-18DE-46D7-B8EF-96AD6FEADE9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{27D161D9-18DE-46D7-B8EF-96AD6FEADE9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{27D161D9-18DE-46D7-B8EF-96AD6FEADE9C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -63,5 +63,8 @@ namespace Sistema_Bordo.Models
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Pedido> Pedido { get; set; }
+
+        public virtual ICollection<Orden> Orden  { get; set; }
+
     }
 }

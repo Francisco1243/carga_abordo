@@ -51,5 +51,7 @@ namespace Sistema_Bordo.Models
         public virtual ICollection<Detalles_Pedido> Detalles_Pedido { get; set; }
 
         public virtual Proveedores Proveedores { get; set; }
+
+        public virtual ICollection<DetalleOrden> detalleorden { get; set; }
     }
 }

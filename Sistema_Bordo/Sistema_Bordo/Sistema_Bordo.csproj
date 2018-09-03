@@ -219,6 +219,7 @@
     <Compile Include="Controllers\EstadoPedidosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\OrdenController.cs" />
     <Compile Include="Controllers\PedidosController.cs" />
     <Compile Include="Controllers\ProductosController.cs" />
     <Compile Include="Controllers\ProveedoresController.cs" />
@@ -226,18 +227,27 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+    <Compile Include="Models\ModelViews\AccountViewModels.cs" />
+=======
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+>>>>>>> 29e7f5b136babd534ca7c1d2ef826b0a678457c9
     <Compile Include="Models\Area.cs" />
     <Compile Include="Models\Cargo.cs" />
     <Compile Include="Models\Categoria.cs" />
     <Compile Include="Models\Clientes.cs" />
     <Compile Include="Models\DB_Carga.cs" />
+    <Compile Include="Models\DetalleOrden.cs" />
     <Compile Include="Models\Detalles_Pedido.cs" />
     <Compile Include="Models\Empleados.cs" />
+    <Compile Include="Models\EstadoOrden.cs" />
     <Compile Include="Models\Estado_Pedidos.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\ModelViews\ManageViewModels.cs" />
+    <Compile Include="Models\ModelViews\OrdenViews.cs" />
+    <Compile Include="Models\Orden.cs" />
+    <Compile Include="Models\OrdenProductos.cs" />
     <Compile Include="Models\Pedido.cs" />
     <Compile Include="Models\Productos.cs" />
     <Compile Include="Models\Proveedores.cs" />
@@ -360,6 +370,7 @@
     <Content Include="Views\TipoPago\Details.cshtml" />
     <Content Include="Views\TipoPago\Edit.cshtml" />
     <Content Include="Views\TipoPago\Index.cshtml" />
+    <Content Include="Views\Orden\NuevaOrden.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
