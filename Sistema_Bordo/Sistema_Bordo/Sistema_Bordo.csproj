@@ -219,6 +219,7 @@
     <Compile Include="Controllers\EstadoPedidosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\OrdenController.cs" />
     <Compile Include="Controllers\PedidosController.cs" />
     <Compile Include="Controllers\ProductosController.cs" />
     <Compile Include="Controllers\ProveedoresController.cs" />
@@ -364,6 +365,7 @@
     <Content Include="Views\TipoPago\Details.cshtml" />
     <Content Include="Views\TipoPago\Edit.cshtml" />
     <Content Include="Views\TipoPago\Index.cshtml" />
+    <Content Include="Views\Orden\NuevaOrden.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
