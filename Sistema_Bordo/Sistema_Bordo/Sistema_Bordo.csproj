@@ -242,6 +242,7 @@
     <Compile Include="Models\Proveedores.cs" />
     <Compile Include="Models\sysdiagrams.cs" />
     <Compile Include="Models\Tipo_Pago.cs" />
+    <Compile Include="Models\ViewModel\OrdenView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
